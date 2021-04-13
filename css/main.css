@@ -1,0 +1,44 @@
+.game-field {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(3, 200px);
+    width: 600px;
+}
+
+.game-field__item {
+    border: 1px solid #000;
+    position: relative;
+}
+
+.game-field__item_cross::after {
+    content: ""; 
+    position: absolute;
+    background: #ff0000;
+    height: 20px;
+    width: 190px;   
+    top: 90px;
+    left: 5px;
+    transform: rotate(45deg);
+}
+
+.game-field__item_cross::before {
+    content: ""; 
+    position: absolute;
+    background: #ff0000;
+    height: 20px;
+    width: 190px;   
+    top: 90px;
+    left: 5px;
+    transform: rotate(-45deg);
+}
+
+.game-field__item_circle::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border: 20px solid #00ff00;
+    border-radius: 50%;
+}
